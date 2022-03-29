@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/news_drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/news_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/posts_fragment_recycler_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/posts_fragment_try_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/try_again"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textDirection="inherit"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/posts_fragment_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:indicatorName="LineScalePartyIndicator"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="یکشنبه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="دوشنبه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="سه شنبه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_4"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="چهارشنبه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_5"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="پنجشنبه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_6"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="جمعه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/day_7"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:text="شنبه"-->
+            <!--android:layout_margin="8dp"-->
+            <!--android:padding="8dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="@dimen/week_days"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textStyle="bold"-->
+            <!--/>-->
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

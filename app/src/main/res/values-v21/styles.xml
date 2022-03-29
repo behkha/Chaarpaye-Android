@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MaterialButton" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:color">@color/green_700</item>
+        <item name="background">@color/black_900</item>
+    </style>
+</resources>

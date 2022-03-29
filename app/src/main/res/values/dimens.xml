@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="week_days">12sp</dimen>
+    <dimen name="week_days_sw720dp">24sp</dimen>
+    <dimen name="week_days_sw600dp">18sp</dimen>
+
+</resources>

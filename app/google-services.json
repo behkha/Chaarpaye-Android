@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "940028864717",
+    "firebase_url": "https://chaarpaye-e1bd2.firebaseio.com",
+    "project_id": "chaarpaye-e1bd2",
+    "storage_bucket": "chaarpaye-e1bd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940028864717:android:0a0bdd9b4915a134",
+        "android_client_info": {
+          "package_name": "com.behkha.chaarpaye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940028864717-pqq1ojbn78f002b5agdcqs3545ra3c9r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.behkha.chaarpaye",
+            "certificate_hash": "9c0181a59f66e1ec006a5858e61680e3f7ed6d65"
+          }
+        },
+        {
+          "client_id": "940028864717-u663kqflgb01febg8vkimgrd7c76jj32.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.behkha.chaarpaye",
+            "certificate_hash": "b6d73b4bd4a22cc563c0a1193fd0d21be561277d"
+          }
+        },
+        {
+          "client_id": "940028864717-681jps19faci9pp3j95mh3nei6gkv3el.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "940028864717-681jps19faci9pp3j95mh3nei6gkv3el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4h7eGJGQmmK1MxJc5l2L4kX6_MYjNx7Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940028864717-681jps19faci9pp3j95mh3nei6gkv3el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

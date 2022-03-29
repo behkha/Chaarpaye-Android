@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <ScrollView
+        android:id="@+id/place_scroll_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <utils.CustomViewPager
+                android:id="@+id/place_view_pager"
+                android:layout_width="0dp"
+                android:layout_height="450dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/place_bookmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_add_circle_outline_white_24dp" />
+
+            <ImageView
+                android:id="@+id/place_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/place_name_layout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_view_pager">
+
+
+                <com.bikomobile.circleindicatorpager.CircleIndicatorPager
+                    android:id="@+id/place_view_pager_indicator"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    app:ci_drawable="@drawable/selected_dot_indicator"
+                    app:ci_drawable_unselected="@drawable/unselected_dot_indicator"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/place_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="@+id/place_view_pager_indicator"
+                    app:layout_constraintTop_toBottomOf="@+id/place_view_pager_indicator"
+                    app:srcCompat="@drawable/ic_share_white_24dp" />
+
+                <TextView
+                    android:id="@+id/place_share_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/share"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="inherit"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@+id/place_share"
+                    app:layout_constraintRight_toRightOf="@+id/place_share"
+                    app:layout_constraintTop_toBottomOf="@+id/place_share" />
+
+                <TextView
+                    android:id="@+id/place_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/white"
+                    android:textDirection="inherit"
+                    android:textSize="32sp"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toRightOf="@+id/place_share_text"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/place_view_pager_indicator"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/place_tag"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:textSize="24sp"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/white"
+                    android:textDirection="inherit"
+                    app:layout_constraintTop_toBottomOf="@+id/place_name"
+                    app:layout_constraintLeft_toRightOf="@+id/place_share_text"
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <org.sufficientlysecure.htmltextview.HtmlTextView
+                android:id="@+id/place_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textAlignment="inherit"
+                android:textDirection="inherit"
+                android:textSize="32sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_name_layout" />
+
+            <Button
+                android:id="@+id/place_link"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:paddingRight="10dp"
+                android:textAlignment="center"
+                android:textDirection="inherit"
+                android:text="@string/want"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:background="@color/black_900"
+                android:drawableEnd="@drawable/finance"
+                app:layout_constraintTop_toBottomOf="@+id/place_content"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/place_address_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pin"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/place_link"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/place_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="viewEnd"
+                android:textDirection="inherit"
+                android:textSize="32sp"
+                app:layout_constraintTop_toBottomOf="@+id/place_link"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/place_address_icon"
+                />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/place_map"
+                android:layout_width="0dp"
+                android:layout_height="450dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/place_address" />
+
+
+
+            <ImageView
+                android:id="@+id/place_authors_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pencil"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/place_map"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/place_authors"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:textAlignment="inherit"
+                android:textColor="@color/colorPrimary"
+                android:textDirection="inherit"
+                android:textSize="24sp"
+                app:layout_constraintRight_toLeftOf="@+id/place_authors_icon"
+                app:layout_constraintTop_toBottomOf="@+id/place_map"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <View
+                android:id="@+id/place_authors_and_photographers_seperator"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/place_authors"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/place_photograghers_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/camera"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/place_authors_and_photographers_seperator"
+                app:layout_constraintRight_toRightOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/place_photograghers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:textAlignment="inherit"
+                android:textColor="@color/colorPrimary"
+                android:textDirection="inherit"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/place_authors_and_photographers_seperator"
+                app:layout_constraintRight_toLeftOf="@+id/place_photograghers_icon"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

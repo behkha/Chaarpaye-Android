@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.behkha.chaarpaye"
+    android:versionName="1.1"
+    android:versionCode="5"
+    tools:ignore="GradleOverrides">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <activity android:name="splash.SplashActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="event.EventActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="place.PlaceActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="collection.collectionBookmarks.CollectionBookmarksActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="category.categoryItems.CategoryItemsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="reigster.Register"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="collection.addToCollection.AddToCollectionActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <activity android:name="setting.SettingActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:targetApi="n" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="141b856c46c3d6ad31bf42d048d7ebbd32569c07" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAKDucozb1cWToU5b4TCCOhh6M-XEcCT3w"/>
+
+    </application>
+
+</manifest>
